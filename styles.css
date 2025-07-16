@@ -1,0 +1,29 @@
+/* Styles For Poke API Form */
+
+
+
+
+.title {
+    background-color: yellow;
+    padding: 25px;
+    margin-bottom: 20px;
+    color: rgb(188, 184, 184);
+    display: flex;
+    justify-content: center;
+
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+#pokemon-info {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+

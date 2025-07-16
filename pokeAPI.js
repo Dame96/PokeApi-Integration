@@ -1,4 +1,8 @@
-// JavaScript to Display Pokemon info from the Poke Api 
+// JavaScript Async functions for fetching and displaying the selected pokemons data. 
+
+
+// 1. async function accepts a pokemon name as the arguement and fetches data from the API
+// 2. response is deserialized and stored in the pokemonData variable, which is returned
 
 async function grabPokemonData(pokemonName) {
     
@@ -9,11 +13,18 @@ async function grabPokemonData(pokemonName) {
     return pokemonData;
 }
 
+//  Async functions: 
+// 1. This function is passed the form submit event as it's argurment, prevents default browser refresh behavior.
+// 2. Stores the value entered in the input field in pokemon variable. 
+
 async function displayPokeInfo(event) {
     event.preventDefault();
     const pokemon = document.getElementById("pokemon").value;
     const pokemonInfoElement = document.getElementById("pokemon-info");
     pokemonInfoElement.innerHTML = "";
+
+// "Pending" message will be shown as data is loading. 
+// once the pokemon data is returnd the name, image, and success message will be shown. 
 
     try {
         pokemonInfoElement.innerHTML = "Pending..."
@@ -25,6 +36,7 @@ async function displayPokeInfo(event) {
         
 
     }
+// If the pokemon is not found this message will display, prompting the user to try again. 
 
     catch (error) {
         console.log("Error:", error.message);
